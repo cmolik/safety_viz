@@ -1,0 +1,35 @@
+@import "leaflet/dist/leaflet.css";
+
+.leaflet-container.box-selecting {
+  cursor: crosshair;
+  user-select: none;
+}
+
+.labels-tiles img { pointer-events: none !important; }
+
+.react-grid-item { min-height: 0 !important; }
+.react-grid-item > div { height: 100%; } /* Panel will be filled by item */
+
+html, body, #root { height: 100%; margin: 0; }
+* { box-sizing: border-box; }
+
+/* Sub-indicator rows fade + slide in when a parent is unfolded into the list. */
+@keyframes indicator-row-unfold {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.indicator-child-row { animation: indicator-row-unfold 0.22s ease; }
+
+/* Blinking "!" badge on a tab that needs attention, until the user clicks it. */
+@keyframes tab-alert-blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.1; }
+}
+.tab-alert { animation: tab-alert-blink 0.9s ease-in-out infinite; }
+
+/* Floating toast notifications (see src/core/toast). */
+@keyframes toast-spin { to { transform: rotate(360deg); } }
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: none; }
+}

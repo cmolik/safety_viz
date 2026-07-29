@@ -1,0 +1,456 @@
+[
+  {
+    "name": "ghd",
+    "indicators": [
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-4",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-5",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-9",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-10"
+    ],
+    "columns": [
+      {
+        "name": "inspectionId",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "inspectionStart",
+        "dataType": "dateTime",
+        "format": "yyyy-MM-dd'T'HH:mmX",
+        "stable": false
+      },
+      {
+        "name": "organizationName",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "inspectionNotes",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "inspectionPlace",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "inspectedCondition",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "discrepancyId",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "minutes",
+        "dataType": "Double",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "count",
+        "dataType": "Integer",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "vehicleType",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "discrepancyNote",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "wkt",
+        "dataType": "wkt:point",
+        "format": "POINT(long lat)",
+        "stable": false
+      },
+      {
+        "name": "uri",
+        "dataType": "URI",
+        "format": null,
+        "stable": false
+      }
+    ]
+  },
+  {
+    "name": "aims",
+    "indicators": [
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-25",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-17",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-20",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-19",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-22",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-30",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-8",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-16",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-32",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-24",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-18",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-34",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-26",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-13",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-21",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-28",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-15",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-23",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-31",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-33",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-6",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-27",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-12",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-11",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2-traktor",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2-p_sov_dopravn_k",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2-zavazadlov_voz_ky",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2-cateringov_v_z",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2-kontejnerov_voz_ky",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2-zavazadlov_voz_k",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2-traktor_s_voz_ky",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2-traktor_s_klecov_mi_voz_ky",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2-treppel",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2-toilet_service",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2-kontejnerov_voz_k",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-2-vt_unknown"
+    ],
+    "columns": [
+      {
+        "name": "discrepancyId",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "inspectionId",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "inspectionStart",
+        "dataType": "dateTime",
+        "format": "yyyy-MM-dd'T'HH:mmX",
+        "stable": false
+      },
+      {
+        "name": "inspectionEnd",
+        "dataType": "dateTime",
+        "format": "yyyy-MM-dd'T'HH:mmX",
+        "stable": false
+      },
+      {
+        "name": "discrepancyDate",
+        "dataType": "dateTime",
+        "format": "yyyy-MM-dd'T'HH:mmX",
+        "stable": false
+      },
+      {
+        "name": "repairDate",
+        "dataType": "dateTime",
+        "format": "yyyy-MM-dd'T'HH:mmX",
+        "stable": false
+      },
+      {
+        "name": "state",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "priorityValue",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "priorityTitle",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "inspectionCategory",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "inspectionTypeId",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "inspectionType",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "repairedImmediately",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "conditionTypeId",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "conditionType",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "sectionId",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "section",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "conditionWkt",
+        "dataType": "wkt:point",
+        "format": "POINT(long lat)",
+        "stable": false
+      },
+      {
+        "name": "wkt",
+        "dataType": "wkt:point",
+        "format": "POINT(long lat)",
+        "stable": false
+      },
+      {
+        "name": "operator",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "fixedBy",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "uri",
+        "dataType": "URI",
+        "format": null,
+        "stable": false
+      }
+    ]
+  },
+  {
+    "name": "safety-briefs",
+    "indicators": [
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-1",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-3"
+    ],
+    "columns": [
+      {
+        "name": "safetyBriefCode",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "description",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "date",
+        "dataType": "dateTime",
+        "format": "yyyy-MM-dd'T'HH:mmX",
+        "stable": false
+      },
+      {
+        "name": "risk",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "uri",
+        "dataType": "URI",
+        "format": null,
+        "stable": false
+      }
+    ]
+  },
+  {
+    "name": "gse",
+    "indicators": [
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-14",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/SI-7"
+    ],
+    "columns": [
+      {
+        "name": "inspectionStart",
+        "dataType": "dateTime",
+        "format": "yyyy-MM-dd'T'HH:mmX",
+        "stable": false
+      },
+      {
+        "name": "equipmentRegistrationNumber",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "organizationName",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "note",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "inspectionPlace",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "discrepancyType",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "uri",
+        "dataType": "URI",
+        "format": null,
+        "stable": false
+      }
+    ]
+  },
+  {
+    "name": "occurrence",
+    "indicators": [
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/AC-damaged_by-Person",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/AC-damaged",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/AC-damaged_by-Infrastructure",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/AC-damaged_by-GSE",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/AC-damaged_by-AC",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Spill-from-A-C",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Spill-from-AC-fuel",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Spill-from-AC-other",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Near-Miss",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Near-Miss_AC-x-GSE",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Near-Miss_AC-x-AC",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Near-Miss_AC-x-Person",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Near-Miss_AC-x-Infrastructure",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/FOD",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/GSE",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Docking",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Injury",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Boarding-Bridge",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Wind-Blast",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Spill-from-GSE",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Fire",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Infrastructure-damaged",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/Jet-Blast",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/GSE_damaged",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/GSE_no-damage",
+      "http://onto.fel.cvut.cz/ontologies/safety-performance-kpis/indicator/AC-Technical-Failure"
+    ],
+    "columns": [
+      {
+        "name": "id",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "spi",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "date",
+        "dataType": "dateTime",
+        "format": "yyyy-MM-dd'T'HH:mmX",
+        "stable": false
+      },
+      {
+        "name": "description",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "location",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "wkt",
+        "dataType": "wkt:point",
+        "format": "POINT(long lat)",
+        "stable": false
+      },
+      {
+        "name": "ac1Type",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "ac2Type",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "vehicle1Type",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "vehicle2Type",
+        "dataType": "String",
+        "format": null,
+        "stable": false
+      },
+      {
+        "name": "uri",
+        "dataType": "URI",
+        "format": null,
+        "stable": false
+      }
+    ]
+  }
+]

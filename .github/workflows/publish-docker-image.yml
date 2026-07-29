@@ -1,0 +1,57 @@
+name: Publish Docker Image
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+env:
+  # The last two fragments of the identifier of the docker image
+  IMAGE_NAME: ${{ github.repository }}
+  MAIN_BRANCH_NAME: main
+  REGISTRY: ghcr.io
+
+# The built-in GITHUB_TOKEN is enough to push to GHCR — no personal token needed.
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-publish:
+    # Skip if PR is from a fork or triggered by Dependabot
+    if: >
+      github.event_name != 'pull_request' ||
+      (github.event.repository.full_name == github.event.pull_request.head.repo.full_name &&
+      github.actor != 'dependabot[bot]')
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Build docker image
+        run: docker build . --file Dockerfile --tag $IMAGE_NAME
+
+      - name: Log in to the Container registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin
+
+      - name: Push image
+        run: |
+          IMAGE_ID=${{ env.REGISTRY }}/$IMAGE_NAME
+          # Change all uppercase to lowercase
+          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+          # Get branch name if merge to a branch
+          GIT_BRANCH_NAME=$(echo "${{ github.ref }}" | grep 'refs/heads/.*' | cut -d"/" -f 3)
+          # Get pull request id (e.g. "pr-123" from "/pulls/123")
+          PULL_REQUEST_ID=$(echo "${{ github.event.pull_request.number }}" | grep -v "^$" | sed 's/^/pr-/')
+          # Get tag id while stripping "v" prefix (e.g. "1.2" from "v1.2")
+          TAG_ID=$(echo "${{ github.ref }}" | grep 'refs/tags/.*' | cut -d"/" -f 3 | sed -e 's/^v//')
+          # Version is either "git branch name"/"pull request id"/"tag id"                    
+          VERSION=${GIT_BRANCH_NAME:-${PULL_REQUEST_ID:-${TAG_ID}}}
+          # Use Docker `latest` tag convention
+          [ "$VERSION" == $MAIN_BRANCH_NAME ] && VERSION=latest
+          echo IMAGE_ID=$IMAGE_ID
+          echo VERSION=$VERSION
+          docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
+          docker push $IMAGE_ID:$VERSION
